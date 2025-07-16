@@ -26,7 +26,6 @@ public class CompleteForm
     @Before
     public void Setup() throws Exception
     {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver-win64/chromedriver-win64/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://formy-project.herokuapp.com/form");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));

@@ -22,7 +22,6 @@ public class Checkboxes
     @Before
     public void Setup() throws Exception
     {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver-win64/chromedriver-win64/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://formy-project.herokuapp.com/checkbox");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
