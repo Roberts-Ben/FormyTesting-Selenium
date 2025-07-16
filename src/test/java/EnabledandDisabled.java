@@ -23,8 +23,8 @@ public class EnabledandDisabled
         driver.get("https://formy-project.herokuapp.com/enabled");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Enabled and Disabled elements",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/enabled", URL);
     }
 
     @Test

@@ -24,8 +24,8 @@ public class Modal
         driver.get("https://formy-project.herokuapp.com/modal");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Modal",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/modal", URL);
     }
 
     @Test

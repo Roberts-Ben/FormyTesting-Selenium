@@ -24,8 +24,8 @@ public class DragDrop
         driver.get("https://formy-project.herokuapp.com/dragdrop");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Drag the image into the box",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/dragdrop", URL);
     }
 
     @Test

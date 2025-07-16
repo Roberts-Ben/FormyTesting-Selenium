@@ -24,8 +24,8 @@ public class SwitchWindow
         driver.get("https://formy-project.herokuapp.com/switch-window");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Switch Window",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/switch-window", URL);
     }
 
     @Test

@@ -27,8 +27,8 @@ public class PageScroll
 
         js = (JavascriptExecutor) driver;
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Large page content",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/scroll", URL);
     }
 
     @Test

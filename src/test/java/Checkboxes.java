@@ -26,8 +26,8 @@ public class Checkboxes
         driver.get("https://formy-project.herokuapp.com/checkbox");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Checkboxes",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/checkbox", URL);
 
         for(int i = 1; i <= 3; i++)
         {

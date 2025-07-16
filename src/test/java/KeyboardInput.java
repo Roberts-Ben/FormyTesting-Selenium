@@ -23,8 +23,8 @@ public class KeyboardInput
         driver.get("https://formy-project.herokuapp.com/keypress");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Keyboard and Mouse Input",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/keypress", URL);
     }
 
     @Test

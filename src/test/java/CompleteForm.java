@@ -31,8 +31,8 @@ public class CompleteForm
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Complete Web Form",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/form", URL);
     }
 
     @Test

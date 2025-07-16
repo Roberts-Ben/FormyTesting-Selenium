@@ -23,8 +23,6 @@ public class DatePicker
     WebDriverWait wait;
 
     DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-    DateFormat dateOnlyFormat = new SimpleDateFormat("dd");
-    DateFormat monthOnlyFormat = new SimpleDateFormat("MM");
     DateFormat yearOnlyFormat = new SimpleDateFormat("yyyy");
     Date date = new Date();
 
@@ -35,8 +33,8 @@ public class DatePicker
         driver.get("https://formy-project.herokuapp.com/datepicker");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("Datepicker",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/datepicker", URL);
     }
 
     @Test

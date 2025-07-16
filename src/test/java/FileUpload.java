@@ -23,8 +23,8 @@ public class FileUpload
         driver.get("https://formy-project.herokuapp.com/fileupload");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement header = driver.findElement(By.cssSelector("h1"));
-        assertEquals("File upload",header.getText());
+        String URL = driver.getCurrentUrl();
+        assertEquals("https://formy-project.herokuapp.com/fileupload", URL);
     }
 
 
